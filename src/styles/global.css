@@ -1,7 +1,8 @@
 :root {
-    --color-bg-dark: hsl(217, 33%, 11%);
+    --color-bg-dark: hsl(217, 32%, 11%);
     --color-bg-navbar: hsl(217, 33%, 17%);
-    --color-accent: hsl(217, 33%, 50%);
+    --color-secondary: hsl(217, 33%, 50%);
+    --color-accent: hsl(192, 90%, 67%);
     --color-text: #F1F5F9;
     --font-family-main: Arial, sans-serif;
     --content-width: 80%;
@@ -72,6 +73,16 @@ section div {
 a {
     font-weight: bold;
     text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-accent);
+    text-shadow: 1px 1px 2px var(--color-accent);
+}
+
+.social:hover {
+    fill: var(--color-accent);
+    filter: drop-shadow(1px 1px 2px var(--color-accent));
 }
 
 .headshot {

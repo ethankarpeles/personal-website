@@ -6,5 +6,5 @@
     border: solid;
     border-width: 0;
     border-top-width: 2px;
-    border-color: var(--color-accent);
+    border-color: var(--color-secondary);
 }
