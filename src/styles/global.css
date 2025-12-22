@@ -79,6 +79,7 @@ a {
     flex: 1 1 var(--headshot-width);
     max-width: 100%;
     min-width: 300px;
+    border-radius: 10%;
     align-self: flex-start;
 }
 
