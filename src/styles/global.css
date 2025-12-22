@@ -12,8 +12,8 @@
     --headshot-width: 10%;
 
     --small-space: 10px;
-    --medium-space: 25px;
-    --large-space: 50px;
+    --medium-space: 20px;
+    --large-space: 40px;
 
     --social-width: clamp(10px, 8vw, 32px);
 }
