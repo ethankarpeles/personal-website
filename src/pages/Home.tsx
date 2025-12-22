@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar.tsx";
+import Footer from "../components/Footer.tsx";
 import headshot from '../assets/professional-headshot.png'
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
@@ -6,6 +7,7 @@ export default function Home() {
     return (<>
         <Navbar />
         <About />
+        <Footer />
     </>);
 }
 

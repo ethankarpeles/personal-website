@@ -1,0 +1,10 @@
+.footer {
+    width: var(--content-width);
+    margin: var(--large-space) auto;
+    padding-top: var(--medium-space);
+    text-align: center;
+    border: solid;
+    border-width: 0;
+    border-top-width: 2px;
+    border-color: var(--color-accent);
+}

@@ -1,6 +1,7 @@
 :root {
-    --color-bg-dark: #0F172A;
-    --color-bg-navbar: #1E293B;
+    --color-bg-dark: hsl(217, 33%, 11%);
+    --color-bg-navbar: hsl(217, 33%, 17%);
+    --color-accent: hsl(217, 33%, 50%);
     --color-text: #F1F5F9;
     --font-family-main: Arial, sans-serif;
     --content-width: 80%;
