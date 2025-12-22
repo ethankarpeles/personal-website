@@ -64,7 +64,7 @@ section {
 }
 
 section div {
-    flex: 2 1 300px;
+    flex: 1 1 300px;
     margin-right: var(--small-space);
 }
 
@@ -75,10 +75,9 @@ a {
 
 .headshot {
     display: flex;
-    flex: 1 2 var(--headshot-width);
+    flex: 1 1 var(--headshot-width);
     max-width: 100%;
-    min-width: 0;
-    min-height: 0;
+    min-width: 300px;
     align-self: flex-start;
 }
 
@@ -92,4 +91,5 @@ iframe {
     width: var(--social-width);
     height: var(--social-width);
     margin-right: var(--small-space);
+    margin-top: var(--small-space);
 }
