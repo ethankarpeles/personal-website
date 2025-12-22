@@ -42,7 +42,7 @@ function About() {
                 <div>
                     <p>Welcome! I am an incoming AI & Software Engineer I at {PMG}. Following a rewarding internship with the company, I am preparing to return through {GLP}.</p>
                     <p>My software engineering journey is grounded in a strong quantitative background at the {UNT}, where I recently graduated with a Bachelor of Science in Mathematics. In 2024, the {UNTMath} recognized my academic and community contributions by naming me {Outstanding}. Beyond the classroom, I also had the opportunity to explore arithmetic geometry through my research in <i>Rational Points on Elliptic Curves</i>, which I presented at the {STaRS} (STaRS).</p>
-                    <p>I thrive at the intersection of mathematical theory and practical software engineering. My goal is to leverage my mathematical knowledge to solve complex problems in the marketing technology space.</p>
+                    <p>I thrive at the intersection of mathematical theory and practical software engineering. My goal is to leverage my mathematical knowledge to solve complex problems in marketing technology.</p>
                 </div>
                 <img src={headshot} className='headshot' />
             </section>
