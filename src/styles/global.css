@@ -61,7 +61,6 @@ section {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    padding-top: var(--medium-space);
 }
 
 section div {
