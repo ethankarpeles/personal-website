@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar.tsx";
 import Footer from "../components/Footer.tsx";
 import headshot from '../assets/professional-headshot.png'
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiOutlineMail, AiFillPhone } from "react-icons/ai";
 
 export default function Home() {
     return (<>
@@ -52,11 +52,17 @@ function About() {
 
 function Socials() {
     return <>
-        <a href='https://www.linkedin.com/in/ethankarpeles/'>
+        <a href='https://www.linkedin.com/in/ethankarpeles/' target='_blank'>
             <AiFillLinkedin className='social' />
         </a>
-        <a href='https://github.com/ethankarpeles'>
+        <a href='https://github.com/ethankarpeles' target='_blank'>
             <AiFillGithub className='social' />
+        </a>
+        <a href='mailto:ethankarpeles@gmail.com' target='_blank'>
+            <AiOutlineMail className='social' />
+        </a>
+        <a href='tel:+1-254-300-2332' target='_blank'>
+            <AiFillPhone className='social' />
         </a>
     </>;
 }

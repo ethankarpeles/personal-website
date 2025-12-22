@@ -101,7 +101,7 @@ a {
 
 a:hover {
     color: var(--color-accent);
-    text-shadow: 1px 1px 2px var(--color-accent);
+    text-shadow: 0.5px 0.5px 1px var(--color-accent);
 }
 
 .social {
@@ -114,5 +114,5 @@ a:hover {
 
 .social:hover {
     fill: var(--color-accent);
-    filter: drop-shadow(1px 1px 2px var(--color-accent));
+    filter: drop-shadow(0.5px 0.5px 1px var(--color-accent));
 }
