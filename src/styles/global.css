@@ -3,14 +3,18 @@
     --color-bg-navbar: hsl(217, 33%, 17%);
     --color-secondary: hsl(217, 33%, 50%);
     --color-accent: hsl(192, 90%, 67%);
-    --color-text: #F1F5F9;
+    --color-text: hsl(217, 33%, 96%);
+
     --font-family-main: Arial, sans-serif;
-    --content-width: 80%;
     --regular-font-size: clamp(1rem, 1.2vw, 1.2rem);
+
+    --content-width: 80%;
+    --headshot-width: 10%;
+
     --small-space: 10px;
     --medium-space: 25px;
     --large-space: 50px;
-    --headshot-width: 10%;
+
     --social-width: clamp(10px, 8vw, 32px);
 }
 
@@ -26,10 +30,12 @@ body,
     padding: 0;
     width: 100vw;
     min-height: 100vh;
-    font-family: var(--font-family-main);
-    font-size: var(--regular-font-size);
+
     display: flex;
     flex-direction: column;
+
+    font-family: var(--font-family-main);
+    font-size: var(--regular-font-size);
     background-color: var(--color-bg-dark);
 }
 
@@ -52,10 +58,11 @@ h2 {
 article {
     display: flex;
     flex-direction: column;
+    flex: 1;
+
     width: var(--content-width);
     margin: 0 auto;
     padding-top: var(--large-space);
-    flex: 1;
 }
 
 section {
@@ -70,6 +77,23 @@ section div {
     margin-right: var(--small-space);
 }
 
+object,
+iframe {
+    flex: 1;
+    border: none;
+}
+
+.headshot {
+    display: flex;
+    flex: 1 1 var(--headshot-width);
+
+    max-width: 100%;
+    min-width: 300px;
+
+    border-radius: 10%;
+    align-self: flex-start;
+}
+
 a {
     font-weight: bold;
     text-decoration: none;
@@ -80,29 +104,15 @@ a:hover {
     text-shadow: 1px 1px 2px var(--color-accent);
 }
 
-.social:hover {
-    fill: var(--color-accent);
-    filter: drop-shadow(1px 1px 2px var(--color-accent));
-}
-
-.headshot {
-    display: flex;
-    flex: 1 1 var(--headshot-width);
-    max-width: 100%;
-    min-width: 300px;
-    border-radius: 10%;
-    align-self: flex-start;
-}
-
-object,
-iframe {
-    flex: 1;
-    border: none;
-}
-
 .social {
     width: var(--social-width);
     height: var(--social-width);
+
     margin-right: var(--small-space);
     margin-top: var(--small-space);
+}
+
+.social:hover {
+    fill: var(--color-accent);
+    filter: drop-shadow(1px 1px 2px var(--color-accent));
 }
