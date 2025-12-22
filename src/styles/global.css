@@ -5,8 +5,11 @@
     --font-family-main: Arial, sans-serif;
     --content-width: 80%;
     --regular-font-size: clamp(1rem, 1.2vw, 1.2rem);
-    --small-padding: 10px;
-    --headshot-width: 40%;
+    --small-space: 10px;
+    --medium-space: 25px;
+    --large-space: 50px;
+    --headshot-width: 10%;
+    --social-width: clamp(10px, 8vw, 32px);
 }
 
 * {
@@ -45,11 +48,25 @@ h2 {
 }
 
 article {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: var(--content-width);
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: var(--large-space);
     flex: 1;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding-top: var(--medium-space);
+}
+
+section div {
+    flex: 2 1 300px;
+    margin-right: var(--small-space);
 }
 
 a {
@@ -58,12 +75,22 @@ a {
 }
 
 .headshot {
-    width: var(--headshot-width);
-    float: right;
-    margin: 0 0 var(--small-padding) var(--small-padding);
+    display: flex;
+    flex: 1 2 var(--headshot-width);
+    max-width: 100%;
+    min-width: 0;
+    min-height: 0;
+    align-self: flex-start;
 }
 
-object {
+object,
+iframe {
     flex: 1;
     border: none;
+}
+
+.social {
+    width: var(--social-width);
+    height: var(--social-width);
+    margin-right: var(--small-space);
 }

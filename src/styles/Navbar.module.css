@@ -23,8 +23,8 @@
 
 .navlink {
     position: relative;
-    left: var(--small-padding);
-    padding: var(--small-padding);
+    left: var(--small-space);
+    padding: var(--small-space);
 }
 
 .navlogo {
