@@ -4,7 +4,7 @@
     --color-text: #F1F5F9;
     --font-family-main: Arial, sans-serif;
     --content-width: 80%;
-    --regular-font-size: clamp(16px, 1.2vw, 18px);
+    --regular-font-size: clamp(1rem, 1.2vw, 1.2rem);
     --small-padding: 10px;
     --headshot-width: 40%;
 }
@@ -37,11 +37,11 @@ h5 {
 }
 
 h1 {
-    font-size: clamp(22px, 5vw, 96px);
+    font-size: clamp(1.7rem, 5.5vw, 6rem);
 }
 
 h2 {
-    font-size: clamp(17px, 2vw, 60px);
+    font-size: clamp(0.95rem, 2.5vw, 4rem);
 }
 
 article {
