@@ -1,14 +1,13 @@
-import '../styles/Navbar.module.css';
+import styles from '../styles/Navbar.module.css';
 import { Link } from 'react-router-dom';
-
-const logoLocation = './src/assets/logo.svg';
+import logo from '../assets/logo.svg';
 
 export default function Navbar() {
     return (
-        <nav>
-            <img src={logoLocation} />
-            <div>
-                <Link to="/">Home</Link>
+        <nav className={styles.navbar}>
+            <img src={logo} className={styles.navlogo} />
+            <div className={styles.navlinks}>
+                <Link to="/" className={styles.navlink}>Home</Link>
             </div>
         </nav>
     );

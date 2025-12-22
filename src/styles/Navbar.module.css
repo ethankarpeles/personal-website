@@ -1,15 +1,15 @@
-nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     background-color: #1E293B;
 }
 
-nav div {
+.navlinkdiv {
     display: flex;
     align-items: center;
 }
 
-nav div a {
+.navlink {
     margin: 10px;
     padding: 10px;
     text-decoration: none;
@@ -17,7 +17,7 @@ nav div a {
     color: #F1F5F9;
 }
 
-img {
+.navlogo {
     width: 50px;
     padding: 10px;
 }
