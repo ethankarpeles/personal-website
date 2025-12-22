@@ -35,8 +35,8 @@ function Content() {
     return (
         <article>
             <header>
-                <h1>Hi, I'm Ethan Karpeles</h1>
-                <h2><i>Incoming AI & Software Engineer, {PMG}</i></h2>
+                <h1 className={styles.introduction}>Hi, I'm Ethan Karpeles</h1>
+                <h2 className={styles.subintroduction}><i>Incoming AI & Software Engineer, {PMG}</i></h2>
                 <Socials />
             </header>
             <section>
