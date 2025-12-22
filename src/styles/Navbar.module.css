@@ -1,7 +1,19 @@
+:root {
+    --navbar-height: 64px;
+    --navbar-logo-height: 60px;
+}
+
 .navbar {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
-    background-color: #1E293B;
+    align-items: center;
+    width: 100%;
+    height: var(--navbar-height);
+    /* Divide by 2 for each side */
+    padding: 0 calc((100% - var(--content-width)) / 2);
+    background-color: var(--color-bg-navbar);
 }
 
 .navlinks {
@@ -10,14 +22,16 @@
 }
 
 .navlink {
-    margin: 10px;
-    padding: 10px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: #F1F5F9;
+    position: relative;
+    left: var(--small-padding);
+    padding: var(--small-padding);
 }
 
 .navlogo {
-    width: 50px;
-    padding: 10px;
+    height: var(--navbar-logo-height);
+    margin: calc((var(--navbar-height) - var(--navbar-logo-height)) / 2) 0px;
+}
+
+.navlogolink {
+    font-size: 0;
 }

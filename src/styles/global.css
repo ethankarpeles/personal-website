@@ -1,5 +1,69 @@
-body {
-    margin: 0px;
-    font-family: Arial, sans-serif;
-    background-color: #0F172A;
+:root {
+    --color-bg-dark: #0F172A;
+    --color-bg-navbar: #1E293B;
+    --color-text: #F1F5F9;
+    --font-family-main: Arial, sans-serif;
+    --content-width: 80%;
+    --regular-font-size: clamp(16px, 1.2vw, 18px);
+    --small-padding: 10px;
+    --headshot-width: 40%;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--color-text);
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    font-family: var(--font-family-main);
+    font-size: var(--regular-font-size);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(22px, 5vw, 96px);
+}
+
+h2 {
+    font-size: clamp(17px, 2vw, 60px);
+}
+
+article {
+    display: block;
+    width: var(--content-width);
+    margin: 0 auto;
+    padding-top: 50px;
+    flex: 1;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.headshot {
+    width: var(--headshot-width);
+    float: right;
+    margin: 0 0 var(--small-padding) var(--small-padding);
+}
+
+iframe {
+    flex: 1;
+    border: none;
 }
