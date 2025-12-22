@@ -1,5 +1,5 @@
-import Navbar from "../components/Navbar.tsx";
-import resume from "../assets/resume.pdf"
+import Navbar from "@components/Navbar/Navbar.tsx";
+import resume from "@assets/documents/resume.pdf"
 
 export default function Resume() {
     return (<>

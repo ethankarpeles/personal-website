@@ -1,6 +1,6 @@
-import styles from '../styles/Navbar.module.css';
+import styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.svg';
+import logo from '@assets/images/logo.svg';
 
 export default function Navbar() {
     return (
@@ -9,7 +9,7 @@ export default function Navbar() {
                 <img src={logo} className={styles.navlogo} />
             </Link>
             <div className={styles.navlinks}>
-                <Link to="/" className={styles.navlink}>Home</Link>
+                <Link to="/" className={styles.navlink}>About</Link>
                 <Link to="/resume" className={styles.navlink}>Resume</Link>
             </div>
         </nav>

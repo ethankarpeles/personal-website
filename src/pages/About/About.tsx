@@ -1,17 +1,17 @@
-import Navbar from "../components/Navbar.tsx";
-import Footer from "../components/Footer.tsx";
-import headshot from '../assets/professional-headshot.png'
+import Navbar from '@components/Navbar/Navbar.tsx';
+import Footer from '@components/Footer/Footer.tsx';
+import headshot from '@assets/images/professional-headshot.png'
 import { AiFillGithub, AiFillLinkedin, AiOutlineMail, AiFillPhone } from "react-icons/ai";
 
-export default function Home() {
+export default function About() {
     return (<>
         <Navbar />
-        <About />
+        <Content />
         <Footer />
     </>);
 }
 
-function About() {
+function Content() {
     const PMG = <a href='https://www.pmg.com/' target='_blank'>
         PMG
     </a>;
