@@ -10,6 +10,10 @@ export default function Resume() {
 
 function FileView() {
     return (
-        <iframe src={resume}></iframe>
+        <object type='application/pdf' data={resume}>
+            <p>
+                Your browser does not support PDFs. <a href={resume}>Download PDF</a>
+            </p>
+        </object>
     );
 }
