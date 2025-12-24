@@ -1,7 +1,7 @@
 import Navbar from '@components/Navbar/Navbar.tsx';
 import Footer from '@components/Footer/Footer.tsx';
 import styles from './About.module.css';
-import headshot from '@assets/images/professional-headshot.png'
+import headshot from '@assets/images/professional-headshot.png';
 import { AiFillGithub, AiFillLinkedin, AiOutlineMail, AiFillPhone } from "react-icons/ai";
 
 export default function About() {
