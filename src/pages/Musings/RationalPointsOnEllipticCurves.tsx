@@ -83,7 +83,7 @@ export default function RationalPointsOnEllipticCurves() {
                 <h2>Counting Rational Points on the Unit Circle</h2>
                 <p>On the unit circle, consider all the lines that look like the black one in the graph below.</p>
                 <iframe src="https://www.desmos.com/calculator/ygsxmkhkyg?embed" />
-                <p>Recall that the equation for a line is <Latex math='y=mx+b' /> where <Latex math='m' /> is the slope and <Latex math='b' /> is the y-intercept. Notice that if we go from the green point on the graph to our y-intercept, we travel 1 unit to the right and b units up or down. Thus:</p>
+                <p>Recall that the equation for a line is <Latex math='y=mx+b' /> where <Latex math='m' /> is the slope and <Latex math='b' /> is the y-intercept. In this case, we'll call our y-intercept <Latex math='t' /> so that <Latex math='b=t' /> here. Notice that if we go from the green point on the graph to our y-intercept, we travel 1 unit to the right and <Latex math='b' /> units up or down. Thus:</p>
                 <Latex math='m = \text{Slope} = \frac{\text{Rise}}{\text{Run}} = \frac{t}{1} = t' center />
                 <p>This means the equation for our black line is <Latex math='y=tx+t=t(1+x)' />.</p>
                 <p>If we divide both sides of this equation by <Latex math='(1+x)' />, we will get:</p>
