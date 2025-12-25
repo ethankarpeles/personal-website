@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    version="1.1"
-   width="71.062584mm"
-   height="70.173744mm"
+   width="497.75952mm"
+   height="497.75952mm"
    id="svg21"
    sodipodi:docname="parameterization-of-unit-circle.svg"
    inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   viewBox="0 0 1881.2982 1881.2982"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -21,21 +22,21 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.4182264"
-     inkscape:cx="31.024667"
-     inkscape:cy="215.76246"
+     inkscape:zoom="0.23618511"
+     inkscape:cx="961.11053"
+     inkscape:cy="1113.5333"
      inkscape:window-width="1472"
      inkscape:window-height="895"
      inkscape:window-x="0"
      inkscape:window-y="33"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg21"
-     inkscape:export-bgcolor="#37373700">
+     inkscape:export-bgcolor="#00000000">
     <inkscape:page
        x="0"
        y="0"
-       width="268.58301"
-       height="265.2236"
+       width="1881.2982"
+       height="1881.2982"
        id="page2"
        margin="0"
        bleed="0" />
@@ -129,7 +130,7 @@
          id="line10" />
     </g>
     <filter
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Invert"
        id="filter18"
        x="0"
@@ -177,7 +178,7 @@
          result="color2" />
     </filter>
     <filter
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Invert"
        id="filter20"
        x="-0.0024752475"
@@ -225,7 +226,7 @@
          result="color2" />
     </filter>
     <filter
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Invert"
        id="filter22"
        x="0"
@@ -273,7 +274,7 @@
          result="color2" />
     </filter>
     <filter
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Invert"
        id="filter24"
        x="0"
@@ -326,15 +327,15 @@
      y="130"
      xlink:href="#Arrow"
      id="use11"
-     transform="translate(-5,-4.7763894)"
+     transform="matrix(7.0045319,0,0,7.0932535,-35.02266,-33.880323)"
      style="filter:url(#filter24)" />
   <use
-     transform="rotate(-90,195.1118,70.111805)"
+     transform="matrix(0,-7.0932535,7.0045319,0,875.56649,1881.2982)"
      xlink:href="#Arrow"
      id="use12"
      style="filter:url(#filter22)" />
   <g
-     transform="matrix(90,0,0,90,125,125.22361)"
+     transform="matrix(630.40787,0,0,638.39282,875.56649,888.24263)"
      stroke="#000000"
      stroke-width="0.01"
      id="g15"
@@ -375,7 +376,7 @@
   <g
      font-size="18px"
      id="g21"
-     transform="translate(-5,-4.7763894)"
+     transform="matrix(7.0045319,0,0,7.0932535,-35.02266,-33.880323)"
      style="filter:url(#filter18)">
     <text
        x="110"
