@@ -67,7 +67,7 @@ export default function RationalPointsOnEllipticCurves() {
                 <h2>Counting primitive Pythagorean Triples</h2>
                 <p>If you think that <Latex math='a^2 + b^2 = c^2' /> and <Latex math='x^2 + y^2 = 1' /> have a similar structure, then you would be right, and this is not by coincidence!</p>
                 <p>Let's use this similar structure to prove that the set of primitive Pythagorean Triples and the set of rational points on the unit circle have the same cardinality by pairing them up.</p>
-                <p>Let <Latex math='{a, b, c}' /> be a primitive Pythagorean Triple. We would like to pair it up with some unique rational point on the unit circle.</p>
+                <p>Let <Latex math='\{a, b, c\}' /> be a primitive Pythagorean Triple. We would like to pair it up with some unique rational point on the unit circle.</p>
                 <p>Let <Latex math='x=\frac a c' /> and <Latex math='y=\frac b c' />. Then, we can do the following:</p>
                 <Latex math='\begin{align*}
                     a^2 + b^2 = c^2
