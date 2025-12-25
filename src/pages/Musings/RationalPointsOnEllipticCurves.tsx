@@ -2,6 +2,12 @@ import Latex from '@components/Latex/Latex.tsx';
 import Footer from '@components/Footer/Footer.tsx';
 import stars from '@assets/images/stars.png';
 import styles from './RationalPointsOnEllipticCurves.module.css';
+import pythagoreanimage from '@assets/images/pythagorean.svg';
+import bijection from '@assets/images/bijection.svg';
+import parameterization from '@assets/images/parameterization-of-unit-circle.svg';
+import pierreFermat from '@assets/images/pierre-de-fermat.jpg';
+import negatives from '@assets/images/negatives.png';
+import fermatCurves from '@assets/images/fermat-curves.png';
 
 export default function RationalPointsOnEllipticCurves() {
     const PythagoreanTheorem = <a href='https://en.wikipedia.org/wiki/Pythagorean_theorem' target='_blank'>Pythagorean Theorem</a>
@@ -12,7 +18,7 @@ export default function RationalPointsOnEllipticCurves() {
         <article>
             <h1>Rational Points on Elliptic Curves</h1>
             <section>
-                <div>
+                <div className='imagewordcontainer'>
                     <h2>Introduction</h2>
                     <p>The information on this page has been extracted from my <a href='https://math.unt.edu/research/stars.html' target='_blank'>Students Talk about Research Seminar</a> (STaRS) presentation given on November 1, 2024. The goal of the presentation was to introduce undergraduate students with a precalculus level mathematical background to Fermat's Last Theorem and Elliptic Curves.</p>
                 </div>
@@ -21,8 +27,12 @@ export default function RationalPointsOnEllipticCurves() {
                 <h2>Triangles</h2>
                 <p>Famously, the {PythagoreanTheorem} states that if <Latex math='a,b,c' /> are the side lengths of a right angle triangle, with <Latex math='c' /> being the hypotenuse, then these numbers must satisfy the following equation:</p>
                 <Latex math='a^2 + b^2 = c^2' center />
-
-                <p>Whole number solutions to this equation have been known for millennia. In fact, there is a <a href='https://en.wikipedia.org/wiki/Plimpton_322' target='_blank'>Babylonian clay tablet</a> with a list of them believed to have been written around 1800 BC. Any set of three positive integers which are the side lengths of a right angle triangle is called a {PythagoreanTriple}, and if these three positive integers have no common factors, we call it a {PrimitivePythagoreanTriple}.</p>
+                <p>In the image below, we note that the area of purple square is equal to the sum of the areas of the red and blue squares.</p>
+                <div className='imagecaptioncontainer'>
+                    <img src={pythagoreanimage} />
+                    By <a href="https://en.wikipedia.org/wiki/User:Wapcaplet" title="en:User:Wapcaplet">en:User:Wapcaplet</a> - Transwikied from en:. Originally created by <a href="https://en.wikipedia.org/wiki/User:Michael_Hardy" title="en:User:Michael Hardy">en:User:Michael Hardy</a>, then scaled, with colour and labels being added by <a href="https://en.wikipedia.org/wiki/User:Wapcaplet" title="en:User:Wapcaplet">en:User:Wapcaplet</a>, transformed in svg format by <a href="https://fr.wikipedia.org/wiki/Utilisateur:Steff" title="fr:Utilisateur:Steff">fr:Utilisateur:Steff</a>, changed colors and font by <a href="https://de.wikipedia.org/wiki/Leo2004" title="de:Leo2004">de:Leo2004</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=640875">Link</a>
+                </div>
+                <p>Whole number solutions to the {PythagoreanTheorem} have been known for millennia. In fact, there is a <a href='https://en.wikipedia.org/wiki/Plimpton_322' target='_blank'>Babylonian clay tablet</a> with a list of them believed to have been written around 1800 BC. Any set of three positive integers which are the side lengths of a right angle triangle is called a {PythagoreanTriple}, and if these three positive integers have no common factors, we call it a {PrimitivePythagoreanTriple}.</p>
 
                 <p>Some examples of primitive Pythagorean Triples include:</p>
                 <Latex math='\{3, 4, 5\}, \ \{5, 12, 13\}, \text{ and } \{8, 15, 17\}' center />
@@ -35,15 +45,22 @@ export default function RationalPointsOnEllipticCurves() {
 
                 <p>After seeing a few of these, it is natural to ask how many primitive Pythagorean Triples exist. Indeed, there is no obvious reason why there should even be infinitely many of them. To answer this question, we will first need to define what mathematicians mean when they say two sets have the same size (or <a href='https://en.wikipedia.org/wiki/Cardinality' target='_blank'>cardinality</a>).</p>
 
+                <div className='imagecaptioncontainer'>
+                    <img src={bijection} style={{ width: "100%" }} />
+                    By <a href="https://en.wikipedia.org/wiki/User:Schapel" title="en:User:Schapel">Schapel</a> - <span lang="en">Own work</span>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=1059694">Link</a>
+                </div>
+
                 <p>In mathematics, we say two sets <em>have the same cardinality</em> if we can pair them up one by one. For example, if everyone in a stadium is sitting in a seat and all seats have a person sitting in them, then we know there are the same number of seats as people. The technical term for this is a <a href='https://en.wikipedia.org/wiki/Bijection' target='_blank'>bijection</a> of sets.</p>
             </section>
 
             <section>
                 <h2>Rational Points on the Unit Circle</h2>
 
-                <p>We call a point <Latex math='(x, y)' /> in 2D space a <em>rational point</em> if both coordinates <Latex math='x \text{ and } y' /> of the point are <a href='https://en.wikipedia.org/wiki/Rational_number' target='_blank'>rational numbers</a>. That is, both <Latex math='x \text{ and } y' /> can be expressed as a ratio of integers with non-zero denominator. For example, the point <Latex math='(-\frac 1 3, \frac 4 5)' /> is rational, but the point <Latex math='(\pi, \sqrt 2)' /> isn't.</p>
-
                 <p>The unit circle is defined to be the circle of radius 1 centered at the origin with the equation <Latex math='x^2 + y^2 = 1' />.</p>
+
+                <iframe src="https://www.desmos.com/calculator/wch7cxrqu4?embed" />
+
+                <p>We call a point <Latex math='(x, y)' /> in 2D space a <em>rational point</em> if both coordinates <Latex math='x \text{ and } y' /> of the point are <a href='https://en.wikipedia.org/wiki/Rational_number' target='_blank'>rational numbers</a>. That is, both <Latex math='x \text{ and } y' /> can be expressed as a ratio of integers with non-zero denominator. For example, the point <Latex math='(-\frac 1 3, \frac 4 5)' /> is rational, but the point <Latex math='(\pi, \sqrt 2)' /> isn't.</p>
             </section>
 
             <section>
@@ -74,18 +91,36 @@ export default function RationalPointsOnEllipticCurves() {
                 <p>Thus, every rational point corresponds to a point on our circe. Also, while we won't do this here, some algebra will show that:</p>
                 <Latex math='x=\frac{1 - t^2}{t^2 + 1} \text{ and } y=\frac{2t}{t^2 + 1}' center />
                 <p>This allows us to get a unique rational point on the unit circle from any rational number <Latex math='t' /> and vice versa.</p>
+
+                <div className='imagecaptioncontainer'>
+                    <img src={parameterization} style={{ width: "100%" }} />
+
+                    By <a href="//commons.wikimedia.org/w/index.php?title=User:Daniel5Ko&amp;action=edit&amp;redlink=1" title="User:Daniel5Ko (page does not exist)">Daniel5Ko</a> - <span lang="en">Own work</span>, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=15854096">Link</a>
+                </div>
+
                 <p>We have shown that rational numbers, the rational points on the unit circle, and primitive Pythagorean Triples all have the same size. This is one example of why talking about rational points on curves is so powerful.</p>
             </section>
             <section>
                 <h2>Fermat's Last Theorem</h2>
                 <p>Fermat's Last Theorem says that there are no three positive integers <Latex math='\{a, b, c\}' /> that satisfy the equation <Latex math='a^n + b^n = c^n' /> whenever <Latex math='n>2' /> is an integer. While Fermat's Last Theorem was first stated in the 1630s by Pierre de Fermat, it wasn't proven until the 1990s by Andrew Wiles using Elliptic Curves.</p>
-                <p>If we apply the same process that we used before of dividing out by <Latex math='c^2' /> but with <Latex math='c^n' /> in this case, we will get fermat curves which have the equation <Latex math='x^n + y^n = 1' />.</p>
+
+                <div className='imagecaptioncontainer'>
+                    <img src={pierreFermat} style={{ width: "100%" }} />
+                    Photo of Pierre de Fermat (Unknown author)
+                </div>
+
+                <p>If we apply the same process that we used before of dividing out by <Latex math='c^2' /> but with <Latex math='c^n' /> in this case, we will get Fermat curves which have the equation <Latex math='x^n + y^n = 1' />.</p>
+                <div className='imagecaptioncontainer'>
+                    <img src={fermatCurves} style={{ width: "100%" }} />
+                    Examples of Fermat curves
+                </div>
+
                 <p>Fermat's Last Theorem is equivalent to these curves having only the trivial rational points.</p>
             </section>
             <section>
                 <h2>Elliptic Curves</h2>
                 <p>Let <Latex math='x, y' /> be variables and let <Latex math='a, b' /> be rational numbers. An <em>elliptic curve</em> is a smooth curve in 2D space that is defined by an equation of the form:</p>
-                <Latex math='y^2 = x^3 + ax + b' />
+                <Latex math='y^2 = x^3 + ax + b' center />
                 <h3>Groups</h3>
                 <p>A <em>group</em> is a set of things which has an operation on them with the following properties (let <Latex math='a, b, c' /> be in our group):</p>
                 <ul style={{ width: "100%" }}>
@@ -100,7 +135,7 @@ export default function RationalPointsOnEllipticCurves() {
                 </ul>
                 <p>For example, the integers are a group under the operation of addition.</p>
                 <h3>Group Operation of Elliptic Curves</h3>
-                <b>The rational points on an elliptic curve are a group under the following operation:</b>
+                <p>The rational points on an elliptic curve are a group under the following operation:</p>
                 <ol>
                     <li>Pick two points <Latex math='P \text{ and } Q' /> to add. These are the two blue points on the graph below.</li>
                     <li>Draw a line through <Latex math='P \text{ and } Q' />.</li>
@@ -108,14 +143,17 @@ export default function RationalPointsOnEllipticCurves() {
                     <li>Flip the point <Latex math='R' /> across the x-axis. This new point is <Latex math='P+Q' />. This final point is represented on the graph by a purple X.</li>
                 </ol>
                 <iframe src="https://www.desmos.com/calculator/pkafnv67h2?embed" />
-                <p>In this group, our identity is defined to be above every point on the curve. Our inverses are our points flipped across the x-axis.</p>
+                <p>In this group, we call our identity <Latex math='\mathcal{O}' />, and we define it to be above every point on the curve. Our inverses are our points flipped across the x-axis.</p>
+                <div className='imagecaptioncontainer'>
+                    <img src={negatives} style={{ width: "100%" }} />
+                </div>
             </section>
             <section>
                 <h2>Mordell-Weil Theorem</h2>
                 <p>We say a group is <em>finitely generated</em> if there is a finite set of elements in the group for which everything in the group can be expressed as a sum of those elements and their inverses with potential repetition. For example, the integers are finitely generated by the set <Latex math='\{1\}' />.</p>
                 <p>The <em>Mordell-Weil Theorem</em> says that the rational points on an elliptic curve are finitely generated.</p>
             </section>
-        </article>
+        </article >
         <Footer />
     </>;
 }

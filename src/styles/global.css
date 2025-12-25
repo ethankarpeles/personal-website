@@ -68,9 +68,21 @@ section {
     align-items: center;
 }
 
-section div {
+.imagewordcontainer {
     flex: 1 1 300px;
     margin-right: var(--small-space);
+}
+
+.imagecaptioncontainer {
+    margin: 0 auto;
+    width: clamp(250px, 40%, 400px);
+    font-size: calc(var(--regular-font-size) * 0.6);
+    font-style: italic;
+    text-align: center;
+}
+
+img {
+    border-radius: 10%;
 }
 
 object {
