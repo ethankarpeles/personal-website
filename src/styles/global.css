@@ -41,7 +41,7 @@ h2,
 h3,
 h4,
 h5 {
-    margin: 0;
+    margin: var(--small-space) 0 0 0;
     width: 100%;
 }
 
@@ -73,10 +73,15 @@ section div {
     margin-right: var(--small-space);
 }
 
-object,
-iframe {
+object {
     flex: 1;
     border: none;
+}
+
+iframe {
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+    max-width: 500px;
 }
 
 a {

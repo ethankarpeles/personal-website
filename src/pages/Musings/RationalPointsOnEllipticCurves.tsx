@@ -48,7 +48,72 @@ export default function RationalPointsOnEllipticCurves() {
 
             <section>
                 <h2>Counting primitive Pythagorean Triples</h2>
-                <p>If you think that <Latex math='a^2 + b^2 = c^2' /> and <Latex math='x^2 + y^2 = 1' /> have a similar structure, then you will be right, and this is not by coincidence!</p>
+                <p>If you think that <Latex math='a^2 + b^2 = c^2' /> and <Latex math='x^2 + y^2 = 1' /> have a similar structure, then you would be right, and this is not by coincidence!</p>
+                <p>Let's use this similar structure to prove that the set of primitive Pythagorean Triples and the set of rational points on the unit circle have the same cardinality by pairing them up.</p>
+                <p>Let <Latex math='{a, b, c}' /> be a primitive Pythagorean Triple. We would like to pair it up with some unique rational point on the unit circle.</p>
+                <p>Let <Latex math='x=\frac a c' /> and <Latex math='y=\frac b c' />. Then, we can do the following:</p>
+                <Latex math='\begin{align*}
+                    a^2 + b^2 = c^2
+                    &\implies \frac{a^2}{c^2} + \frac{b^2}{c^2} = 1 \\
+                    &\implies \Big( \frac{a}{c} \Big)^2 + \Big( \frac{b}{c} \Big)^2 = 1 \\
+                    &\implies x^2 + y^2 = 1
+                \end{align*}' display center />
+                <p>Thus, we know the point <Latex math='(x, y)' /> is actually on the unit circle. The other direction of this would be all of these steps in reverse. There are some simplifying assumptions we are making here. For example, this process only works for the first quadrant of the plane. However, I assure you a similar argument can be made for the entire circle.</p>
+                <iframe src="https://www.desmos.com/calculator/eq25prgp6t?embed" />
+                <p style={{ textAlign: "center" }}>Can you find the (3, 4, 5) triangle?</p>
+            </section>
+            <section>
+                <h2>Counting Rational Points on the Unit Circle</h2>
+                <p>On the unit circle, consider all the lines that look like the black one in the graph below.</p>
+                <iframe src="https://www.desmos.com/calculator/ygsxmkhkyg?embed" />
+                <p>Recall that the equation for a line is <Latex math='y=mx+b' /> where <Latex math='m' /> is the slope and <Latex math='b' /> is the y-intercept. Notice that if we go from the green point on the graph to our y-intercept, we travel 1 unit to the right and b units up or down. Thus:</p>
+                <Latex math='m = \text{Slope} = \frac{\text{Rise}}{\text{Run}} = \frac{t}{1} = t' center />
+                <p>This means the equation for our black line is <Latex math='y=tx+t=t(1+x)' />.</p>
+                <p>If we divide both sides of this equation by <Latex math='(1+x)' />, we will get:</p>
+                <Latex math='t = \frac{y}{1+x}' center />
+                <p>Thus, every rational point corresponds to a point on our circe. Also, while we won't do this here, some algebra will show that:</p>
+                <Latex math='x=\frac{1 - t^2}{t^2 + 1} \text{ and } y=\frac{2t}{t^2 + 1}' center />
+                <p>This allows us to get a unique rational point on the unit circle from any rational number <Latex math='t' /> and vice versa.</p>
+                <p>We have shown that rational numbers, the rational points on the unit circle, and primitive Pythagorean Triples all have the same size. This is one example of why talking about rational points on curves is so powerful.</p>
+            </section>
+            <section>
+                <h2>Fermat's Last Theorem</h2>
+                <p>Fermat's Last Theorem says that there are no three positive integers <Latex math='\{a, b, c\}' /> that satisfy the equation <Latex math='a^n + b^n = c^n' /> whenever <Latex math='n>2' /> is an integer. While Fermat's Last Theorem was first stated in the 1630s by Pierre de Fermat, it wasn't proven until the 1990s by Andrew Wiles using Elliptic Curves.</p>
+                <p>If we apply the same process that we used before of dividing out by <Latex math='c^2' /> but with <Latex math='c^n' /> in this case, we will get fermat curves which have the equation <Latex math='x^n + y^n = 1' />.</p>
+                <p>Fermat's Last Theorem is equivalent to these curves having only the trivial rational points.</p>
+            </section>
+            <section>
+                <h2>Elliptic Curves</h2>
+                <p>Let <Latex math='x, y' /> be variables and let <Latex math='a, b' /> be rational numbers. An <em>elliptic curve</em> is a smooth curve in 2D space that is defined by an equation of the form:</p>
+                <Latex math='y^2 = x^3 + ax + b' />
+                <h3>Groups</h3>
+                <p>A <em>group</em> is a set of things which has an operation on them with the following properties (let <Latex math='a, b, c' /> be in our group):</p>
+                <ul style={{ width: "100%" }}>
+                    <li>Associativity</li>
+                    <Latex math='a + (b + c) = (a + b) + c' center />
+                    <li>Identity</li>
+                    <Latex math='a + 0 = a = 0 + a' center />
+                    <li>Inverses</li>
+                    <Latex math='a + (-a) = 0 = (-a) + a' center />
+                    <li>Closure</li>
+                    <Latex math='a + b \text{ is still in our group.}' center />
+                </ul>
+                <p>For example, the integers are a group under the operation of addition.</p>
+                <h3>Group Operation of Elliptic Curves</h3>
+                <b>The rational points on an elliptic curve are a group under the following operation:</b>
+                <ol>
+                    <li>Pick two points <Latex math='P \text{ and } Q' /> to add. These are the two blue points on the graph below.</li>
+                    <li>Draw a line through <Latex math='P \text{ and } Q' />.</li>
+                    <li>Find the third point of intersection of this line with the curve. Call it <Latex math='R' />. This is the purple circle on the graph below.</li>
+                    <li>Flip the point <Latex math='R' /> across the x-axis. This new point is <Latex math='P+Q' />. This final point is represented on the graph by a purple X.</li>
+                </ol>
+                <iframe src="https://www.desmos.com/calculator/pkafnv67h2?embed" />
+                <p>In this group, our identity is defined to be above every point on the curve. Our inverses are our points flipped across the x-axis.</p>
+            </section>
+            <section>
+                <h2>Mordell-Weil Theorem</h2>
+                <p>We say a group is <em>finitely generated</em> if there is a finite set of elements in the group for which everything in the group can be expressed as a sum of those elements and their inverses with potential repetition. For example, the integers are finitely generated by the set <Latex math='\{1\}' />.</p>
+                <p>The <em>Mordell-Weil Theorem</em> says that the rational points on an elliptic curve are finitely generated.</p>
             </section>
         </article>
         <Footer />
