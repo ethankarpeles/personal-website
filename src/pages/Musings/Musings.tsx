@@ -4,10 +4,6 @@ import Navbar from '@components/Navbar/Navbar.tsx';
 export default function Musings() {
     return (<>
         <Navbar />
-        <Content />
+        <Outlet />
     </>);
-}
-
-function Content() {
-    return <Outlet />;
 }

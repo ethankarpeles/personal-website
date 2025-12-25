@@ -20,24 +20,24 @@ export default function RationalPointsOnEllipticCurves() {
             <section>
                 <div className='imagewordcontainer'>
                     <h2>Introduction</h2>
-                    <p>The information on this page has been extracted from my <a href='https://math.unt.edu/research/stars.html' target='_blank'>Students Talk about Research Seminar</a> (STaRS) presentation given on November 1, 2024. The goal of the presentation was to introduce undergraduate students with a precalculus level mathematical background to Fermat's Last Theorem and Elliptic Curves.</p>
+                    <p>The information on this page has been extracted from my <a href='https://math.unt.edu/research/stars.html' target='_blank'>Students Talk about Research Seminar</a> (STaRS) presentation given on November 1, 2024. The goal of the presentation was to introduce undergraduate students with a precalculus level mathematical background to Fermat's Last Theorem and elliptic curves.</p>
                 </div>
                 <img src={stars} className={styles.stars} />
 
                 <h2>Triangles</h2>
-                <p>Famously, the {PythagoreanTheorem} states that if <Latex math='a,b,c' /> are the side lengths of a right angle triangle, with <Latex math='c' /> being the hypotenuse, then these numbers must satisfy the following equation:</p>
+                <p>Famously, the {PythagoreanTheorem} states that if <Latex math='a,b,c' /> are the side lengths of a right triangle, with <Latex math='c' /> being the hypotenuse, then these numbers must satisfy the following equation:</p>
                 <Latex math='a^2 + b^2 = c^2' center />
-                <p>In the image below, we note that the area of purple square is equal to the sum of the areas of the red and blue squares.</p>
+                <p>In the image below, we note that the area of the purple square is equal to the sum of the areas of the red and blue squares.</p>
                 <div className='imagecaptioncontainer'>
                     <img src={pythagoreanimage} />
                     By <a href="https://en.wikipedia.org/wiki/User:Wapcaplet" title="en:User:Wapcaplet">en:User:Wapcaplet</a> - Transwikied from en:. Originally created by <a href="https://en.wikipedia.org/wiki/User:Michael_Hardy" title="en:User:Michael Hardy">en:User:Michael Hardy</a>, then scaled, with colour and labels being added by <a href="https://en.wikipedia.org/wiki/User:Wapcaplet" title="en:User:Wapcaplet">en:User:Wapcaplet</a>, transformed in svg format by <a href="https://fr.wikipedia.org/wiki/Utilisateur:Steff" title="fr:Utilisateur:Steff">fr:Utilisateur:Steff</a>, changed colors and font by <a href="https://de.wikipedia.org/wiki/Leo2004" title="de:Leo2004">de:Leo2004</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=640875">Link</a>
                 </div>
-                <p>Whole number solutions to the {PythagoreanTheorem} have been known for millennia. In fact, there is a <a href='https://en.wikipedia.org/wiki/Plimpton_322' target='_blank'>Babylonian clay tablet</a> with a list of them believed to have been written around 1800 BC. Any set of three positive integers which are the side lengths of a right angle triangle is called a {PythagoreanTriple}, and if these three positive integers have no common factors, we call it a {PrimitivePythagoreanTriple}.</p>
+                <p>Whole number solutions to the {PythagoreanTheorem} have been known for millennia. In fact, there is a <a href='https://en.wikipedia.org/wiki/Plimpton_322' target='_blank'>Babylonian clay tablet</a> with a list of them believed to have been written around 1800 BC. Any set of three positive integers which are the side lengths of a right triangle is called a {PythagoreanTriple}, and if these three positive integers have no common factors, we call it a {PrimitivePythagoreanTriple}.</p>
 
                 <p>Some examples of primitive Pythagorean Triples include:</p>
                 <Latex math='\{3, 4, 5\}, \ \{5, 12, 13\}, \text{ and } \{8, 15, 17\}' center />
 
-                <p>A non-example of a {PrimitivePythagoreanTriple} is <Latex math='\{6, 8, 10\}' />. Notice that these three numbers have a common factor of <Latex math='2' />, so it is not primitive. However, it is still a {PythagoreanTriple} since you could construct a right angle triangle with these side lengths.</p>
+                <p>A non-example of a {PrimitivePythagoreanTriple} is <Latex math='\{6, 8, 10\}' />. Notice that these three numbers have a common factor of <Latex math='2' />, so it is not primitive. However, it is still a {PythagoreanTriple} since you could construct a right triangle with these side lengths.</p>
             </section>
 
             <section>
@@ -75,7 +75,7 @@ export default function RationalPointsOnEllipticCurves() {
                     &\implies \Big( \frac{a}{c} \Big)^2 + \Big( \frac{b}{c} \Big)^2 = 1 \\
                     &\implies x^2 + y^2 = 1
                 \end{align*}' display center />
-                <p>Thus, we know the point <Latex math='(x, y)' /> is actually on the unit circle. The other direction of this would be all of these steps in reverse. There are some simplifying assumptions we are making here. For example, this process only works for the first quadrant of the plane. However, I assure you a similar argument can be made for the entire circle.</p>
+                <p>Thus, we know the point <Latex math='(x, y)' /> is actually on the unit circle. The other direction of this would be all of these steps in reverse.</p>
                 <iframe src="https://www.desmos.com/calculator/eq25prgp6t?embed" />
                 <p style={{ textAlign: "center" }}>Can you find the (3, 4, 5) triangle?</p>
             </section>
@@ -88,21 +88,19 @@ export default function RationalPointsOnEllipticCurves() {
                 <p>This means the equation for our black line is <Latex math='y=tx+t=t(1+x)' />.</p>
                 <p>If we divide both sides of this equation by <Latex math='(1+x)' />, we will get:</p>
                 <Latex math='t = \frac{y}{1+x}' center />
-                <p>Thus, every rational point corresponds to a point on our circe. Also, while we won't do this here, some algebra will show that:</p>
-                <Latex math='x=\frac{1 - t^2}{t^2 + 1} \text{ and } y=\frac{2t}{t^2 + 1}' center />
+                <p>Thus, every rational point corresponds to a point on our circle. Also, while we won't do this here, some algebra will show that:</p>
+                <Latex math='x=\frac{1 - t^2}{1 + t^2} \text{ and } y=\frac{2t}{1 + t^2}' center />
                 <p>This allows us to get a unique rational point on the unit circle from any rational number <Latex math='t' /> and vice versa.</p>
 
                 <div className='imagecaptioncontainer'>
                     <img src={parameterization} style={{ width: "100%" }} />
-
-                    By <a href="//commons.wikimedia.org/w/index.php?title=User:Daniel5Ko&amp;action=edit&amp;redlink=1" title="User:Daniel5Ko (page does not exist)">Daniel5Ko</a> - <span lang="en">Own work</span>, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=15854096">Link</a>
                 </div>
 
-                <p>We have shown that rational numbers, the rational points on the unit circle, and primitive Pythagorean Triples all have the same size. This is one example of why talking about rational points on curves is so powerful.</p>
+                <p>We have shown that the set of all rational numbers, the set of rational points on the unit circle, and the set of primitive Pythagorean Triples all have the same size (up to finitely many exceptional points and symmetries which preserve cardinality). This is one example of why talking about rational points on curves is so powerful.</p>
             </section>
             <section>
                 <h2>Fermat's Last Theorem</h2>
-                <p>Fermat's Last Theorem says that there are no three positive integers <Latex math='\{a, b, c\}' /> that satisfy the equation <Latex math='a^n + b^n = c^n' /> whenever <Latex math='n>2' /> is an integer. While Fermat's Last Theorem was first stated in the 1630s by Pierre de Fermat, it wasn't proven until the 1990s by Andrew Wiles using Elliptic Curves.</p>
+                <p>Fermat's Last Theorem says that there are no three positive integers <Latex math='\{a, b, c\}' /> that satisfy the equation <Latex math='a^n + b^n = c^n' /> whenever <Latex math='n>2' /> is an integer. While Fermat's Last Theorem was first stated in the 1630s by Pierre de Fermat, it wasn't proven until the 1990s by Andrew Wiles using deep results related to elliptic curves.</p>
 
                 <div className='imagecaptioncontainer'>
                     <img src={pierreFermat} style={{ width: "100%" }} />
@@ -115,7 +113,7 @@ export default function RationalPointsOnEllipticCurves() {
                     Examples of Fermat curves
                 </div>
 
-                <p>Fermat's Last Theorem is equivalent to these curves having only the trivial rational points.</p>
+                <p>Using Fermat's Last Theorem, one can show that these curves have only the trivial rational points. That is, those which are labeled on the graphs above.</p>
             </section>
             <section>
                 <h2>Elliptic Curves</h2>
@@ -151,7 +149,7 @@ export default function RationalPointsOnEllipticCurves() {
             <section>
                 <h2>Mordell-Weil Theorem</h2>
                 <p>We say a group is <em>finitely generated</em> if there is a finite set of elements in the group for which everything in the group can be expressed as a sum of those elements and their inverses with potential repetition. For example, the integers are finitely generated by the set <Latex math='\{1\}' />.</p>
-                <p>The <em>Mordell-Weil Theorem</em> says that the rational points on an elliptic curve are finitely generated.</p>
+                <p>The <em>Mordell-Weil Theorem</em> says that the rational points on an elliptic curve are finitely generated. This means that no matter what an elliptic curve looks like, you will always be able to find a <em>finite</em> set of points on it that generate every single rational point on the curve!</p>
             </section>
         </article >
         <Footer />

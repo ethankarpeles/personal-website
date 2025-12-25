@@ -28,8 +28,10 @@
 
 .introduction {
     font-size: clamp(1.7rem, 5.5vw, 6rem);
+    margin: 0;
 }
 
 .subintroduction {
     font-size: clamp(0.95rem, 2.5vw, 4rem);
+    margin: 0;
 }
