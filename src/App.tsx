@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "@pages/About/About.tsx";
 import Resume from "@pages/Resume/Resume.tsx";
 import Library from "@pages/Musings/Library.tsx";
@@ -7,7 +7,7 @@ import { articles } from "@routes/articles";
 
 export default function App() {
     return (
-        <HashRouter>
+        <BrowserRouter>
             <Routes>
                 <Route path="/" element={<About />} />
                 <Route path="/musings" element={<Musings />} >
@@ -18,6 +18,6 @@ export default function App() {
                 </Route>
                 <Route path="/resume" element={<Resume />} />
             </Routes>
-        </HashRouter>
+        </BrowserRouter>
     );
 }
